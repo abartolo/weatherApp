@@ -1,0 +1,19 @@
+{
+  "name": "WeatherApp",
+  "version": "0.0.1",
+  "description": "This NodeJS server with Express framework should be able to host my WeatherApp developed in Udemy course.",
+  "main": "web-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/abartolo/weatherApp.git"
+  },
+  "author": "Alexander Bartolo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abartolo/weatherApp/issues"
+  },
+  "homepage": "https://github.com/abartolo/weatherApp"
+}
