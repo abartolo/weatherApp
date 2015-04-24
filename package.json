@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/abartolo/weatherApp/issues"
   },
-  "homepage": "https://github.com/abartolo/weatherApp"
+  "homepage": "https://github.com/abartolo/weatherApp",
+  "dependencies": {
+    "express": "~4.12.3"
+  }
 }
