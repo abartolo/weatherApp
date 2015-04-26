@@ -4,7 +4,7 @@
 
 
 //Directives
-weatherApp.directive('searchResult',function(){
+weatherApp.directive('searchResult',['weatherService',function(weatherService){
 
 
     return {
@@ -15,15 +15,14 @@ weatherApp.directive('searchResult',function(){
             weatherDay: '=',
             convertToStandard: "&",
             convertToDate: "&",
-            dateFormat: "@"
+            dateFormat: "@",
+            weatherImgLink: "="
 
         },
         restrict:  'E',
         replace: true
 
-
-
     };
 
 
-});
+}]);

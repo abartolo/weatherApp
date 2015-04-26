@@ -10,6 +10,9 @@ weatherApp.controller('forecastController',['$scope','$resource', '$filter', '$r
 
     $scope.weatherResult = weatherService.getWeatherResult($scope.cityName,$scope.days);
 
+    $scope.weatherIconUrl = weatherService.getWeatherIconApiUrl;
+
+    //Get URL to be passed to Directive. Directive will use NG- to display.
 
     $scope.convertToFahrenheit = function(degK){
         return Math.round((1.8 * (degK - 273)) + 32);

@@ -1,4 +1,5 @@
 <div class="panel panel-default">
+    <img ng-src="{{weatherImgLink + weatherDay.weather[0].icon + '.png' }}">
     <div class="panel-heading">
         <h3 class="panel-title">
             {{convertToDate({dateVal:weatherDay.dt}) | date: dateFormat}}

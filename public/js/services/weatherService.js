@@ -5,12 +5,15 @@
 //cityService
 weatherApp.service('weatherService',['$resource',function($resource){
 
-    this.city = "";
+    var self = this;
 
     var weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily',
         { callback: 'JSON_CALLBACK'},
         { get: { method: 'JSONP'}}
     );
+
+    this.city = "";
+
 
     this.getWeatherResult = function(cityName,forecastDays) {
 
@@ -19,6 +22,12 @@ weatherApp.service('weatherService',['$resource',function($resource){
             cnt: forecastDays
         });
     };
+
+    this.getWeatherIconApiByNumber = function(imgNumber){
+        return 'http://openweathermap.org/img/w/' + imgNumber + '.png';
+    };
+
+    this.getWeatherIconApiUrl = 'http://openweathermap.org/img/w/';
 
 
 
