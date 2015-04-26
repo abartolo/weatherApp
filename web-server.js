@@ -33,11 +33,45 @@ app.get('/pages/forecast.html',function(req,res){
 });
 
 //sends forecastResultContainer.html when requested
-app.get('/directives/forecastResultContainer.html',function(req,res){
+app.get('/pages/forecastResultContainer.html',function(req,res){
 
-    res.sendFile(path.join(__dirname + '/public/directives/forecastResultContainer.html'));
+    res.sendFile(path.join(__dirname + '/public/pages/forecastResultContainer.html'));
 
 });
+
+//sends homepage.js when requested
+app.get('/js/controllers/homepageController.js',function(req,res){
+
+    res.sendFile(path.join(__dirname + '/public/js/controllers/homepageController.js'));
+
+});
+
+//sends app.js when requested
+app.get('/js/controllers/forecastController.js',function(req,res){
+
+    res.sendFile(path.join(__dirname + '/public/js/controllers/forecastController.js'));
+
+});
+
+//sends searchResult.js when requested
+app.get('/js/directives/searchResult.js',function(req,res){
+
+    res.sendFile(path.join(__dirname + '/public/js/directives/searchResult.js'));
+
+});
+//sends weatherService.js when requested
+app.get('/js/services/weatherService.js',function(req,res){
+
+    res.sendFile(path.join(__dirname + '/public/js/services/weatherService.js'));
+
+});
+//sends app.js when requested
+app.get('/js/app.js',function(req,res){
+
+    res.sendFile(path.join(__dirname + '/public/js/app.js'));
+
+});
+
 
 //sends app.js when requested
 app.get('/js/app.js',function(req,res){
