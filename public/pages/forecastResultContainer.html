@@ -1,5 +1,25 @@
+
+<div>
+    <img ng-src="{{weatherImgLink + weatherDay.weather[0].icon + '.png' }}" class="img-responsive img-circle" alt="weather icon image">
+</div>
+
+<div>
+    <h3>
+        {{convertToDate({dateVal:weatherDay.dt}) | date: dateFormat}}
+    </h3>
+</div>
+
+<div>
+    Daytime temperature: {{convertToStandard({tempVal:weatherDay.temp.day})}}
+</div>
+
+
+<!--
 <div class="panel panel-default">
-    <img ng-src="{{weatherImgLink + weatherDay.weather[0].icon + '.png' }}">
+    <div>
+        <img ng-src="{{weatherImgLink + weatherDay.weather[0].icon + '.png' }}" class="img-responsive img-circle" alt="weather icon image">
+    </div>
+
     <div class="panel-heading">
         <h3 class="panel-title">
             {{convertToDate({dateVal:weatherDay.dt}) | date: dateFormat}}
@@ -9,3 +29,5 @@
         Daytime temperature: {{convertToStandard({tempVal:weatherDay.temp.day})}}
     </div>
 </div>
+
+-->

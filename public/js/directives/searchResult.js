@@ -20,7 +20,7 @@ weatherApp.directive('searchResult',['weatherService',function(weatherService){
 
         },
         restrict:  'E',
-        replace: true
+        replace: false
 
     };
 
