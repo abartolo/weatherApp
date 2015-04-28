@@ -72,11 +72,10 @@ app.get('/js/app.js',function(req,res){
 
 });
 
-
 //sends app.js when requested
-app.get('/js/app.js',function(req,res){
+app.get('/css/main.css',function(req,res){
 
-    res.sendFile(path.join(__dirname + '/public/js/app.js'));
+    res.sendFile(path.join(__dirname + '/public/css/main.css'));
 
 });
 

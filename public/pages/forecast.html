@@ -11,10 +11,60 @@ Days: <a ng-class="{'bg-primary': days === '2'}" href="#/forecast/2">2</a> | <a 
 <hr/>
 <div class="container-fluid">
     <div class="row">
-        <div ng-repeat="w in weatherResult.list" class="col-md-6 .col-md-offset-3">
+        <div ng-repeat="w in weatherResult.list">
 
-            <search-result weather-day="w" weather-img-link="weatherIconUrl" convert-to-standard="convertToFahrenheit(tempVal)" convert-to-date="convertToDate(dateVal)" date-format="MMM d,y"></search-result>
+            <search-result number-of-days="days" weather-day="w" weather-img-link="weatherIconUrl" convert-to-standard="convertToFahrenheit(tempVal)" convert-to-date="convertToDate(dateVal)" date-format="MMM d,y"></search-result>
+
 
         </div>
     </div>
 </div>
+
+
+<!--
+<div class="row">
+    <div  style="background-color: lightblue;" class="col-md-3 col-md-offset-2">.col-md-4 .col-md-offset-3</div>
+    <div  style="background-color: lightblue;" class="col-md-3 col-md-offset-2">.col-md-4 .col-md-offset-3</div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div  style="width: 20%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+    <div  style="width: 20%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+    <div  style="width: 20%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+    <div  style="width: 20%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+    <div  style="width: 20%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div  style="width: 14.28%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+    <div  style="width: 14.28%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+    <div  style="width: 14.28%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+    <div  style="width: 14.28%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+    <div  style="width: 14.28%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+    <div  style="width: 14.28%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+    <div  style="width: 14.28%;background-color: lightblue;" class="col-md-2 ">.col-md-4 .col-md-offset-3</div>
+</div>
+
+
+            <div ng-class="{'col-md-2 fiveDayWidth': days === '5', 'col-md-2 sevenDayWidth': days === '7', 'col-md-3 col-md-offset-2': days !== '5' && days !== '7'  }">
+
+
+                <div>
+                    <img ng-src="{{weatherImgLink + weatherDay.weather[0].icon + '.png' }}" class="img-responsive img-circle" alt="weather icon image">
+                </div>
+
+                <div>
+                    <h3>
+                        dateHere
+                    </h3>
+                </div>
+
+                <div>
+                    Daytime temperature: tempHere
+                </div>
+
+            </div>
+
+-->

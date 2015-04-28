@@ -5,6 +5,7 @@ weatherApp.controller('forecastController',['$scope','$resource', '$filter', '$r
     $scope.cityName = weatherService.city;
     $scope.days = $routeParams.days || '2';
 
+
     console.log($scope.days);
 
 

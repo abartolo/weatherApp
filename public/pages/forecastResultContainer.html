@@ -1,20 +1,25 @@
+<div ng-class="{'col-md-2 fiveDayWidth': numberOfDays === '5', 'col-md-2 sevenDayWidth': numberOfDays === '7', 'col-md-3 col-md-offset-2': numberOfDays !== '5' && numberOfDays !== '7'  }">
 
-<div>
-    <img ng-src="{{weatherImgLink + weatherDay.weather[0].icon + '.png' }}" class="img-responsive img-circle" alt="weather icon image">
-</div>
 
-<div>
-    <h3>
-        {{convertToDate({dateVal:weatherDay.dt}) | date: dateFormat}}
-    </h3>
-</div>
+    <div>
+        <img ng-src="{{weatherImgLink + weatherDay.weather[0].icon + '.png' }}" class="img-responsive img-circle" alt="weather icon image">
+    </div>
 
-<div>
-    Daytime temperature: {{convertToStandard({tempVal:weatherDay.temp.day})}}
+    <div>
+        <h3>
+            {{convertToDate({dateVal:weatherDay.dt}) | date: dateFormat}}
+        </h3>
+    </div>
+
+    <div>
+        Daytime temperature: {{convertToStandard({tempVal:weatherDay.temp.day})}}
+    </div>
+
 </div>
 
 
 <!--
+ng-class="{col-md-2 fiveDayWidth: parseInt(days) === 5, col-md-2 sevenDayWidth: parseInt(days) === 7, col-md-3 col-md-offset-2: parseInt(days)!== 5 && parseInt(days) !== 7  }"
 <div class="panel panel-default">
     <div>
         <img ng-src="{{weatherImgLink + weatherDay.weather[0].icon + '.png' }}" class="img-responsive img-circle" alt="weather icon image">

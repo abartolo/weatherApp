@@ -16,7 +16,8 @@ weatherApp.directive('searchResult',['weatherService',function(weatherService){
             convertToStandard: "&",
             convertToDate: "&",
             dateFormat: "@",
-            weatherImgLink: "="
+            weatherImgLink: "=",
+            numberOfDays: "="
 
         },
         restrict:  'E',
