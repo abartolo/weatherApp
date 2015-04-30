@@ -1,19 +1,27 @@
-<div ng-class="{'col-md-2 fiveDayWidth': numberOfDays === '5', 'col-md-2 sevenDayWidth': numberOfDays === '7', 'col-md-3 col-md-offset-2': numberOfDays !== '5' && numberOfDays !== '7'  }">
+<div class="eachWeatherContainer" ng-class="{'col-md-2 fiveDayWidth': numberOfDays === '5', 'col-md-2 sevenDayWidth': numberOfDays === '7', 'col-md-3 col-md-offset-2': numberOfDays !== '5' && numberOfDays !== '7'  }">
 
-
-    <div>
-        <img ng-src="{{weatherImgLink + weatherDay.weather[0].icon + '.png' }}" class="img-responsive img-circle" alt="weather icon image">
-    </div>
-
-    <div>
+    <div class="weatherItemContainers weatherDateContainer">
         <h3>
             {{convertToDate({dateVal:weatherDay.dt}) | date: dateFormat}}
         </h3>
     </div>
 
-    <div>
-        Daytime temperature: {{convertToStandard({tempVal:weatherDay.temp.day})}}
+    <div  class="weatherItemContainers weatherImgContainer">
+        <img class="weatherImgIcon" ng-src="{{weatherImgLink + weatherDay.weather[0].icon + '.png' }}" class="img-responsive img-circle" alt="weather icon image">
     </div>
+
+    <div class="weatherItemContainers temperatureContainer">
+         <p class="temperature">{{convertToStandard({tempVal:weatherDay.temp.day})}} &deg;</p>
+    </div>
+
+    <div class="weatherItemContainers temperatureLabelContainer">
+        <p class="temperatureLabel" >Daytime</p>
+    </div>
+
+    <div class="weatherItemContainers moreInfoContainer">
+        <p class="moreInfoLabel"> More Info</p>
+    </div>
+
 
 </div>
 
