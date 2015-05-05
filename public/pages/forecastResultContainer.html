@@ -15,11 +15,20 @@
     </div>
 
     <div class="weatherItemContainers temperatureLabelContainer">
-        <p class="temperatureLabel" >Daytime</p>
+        <p class="temperatureLabel" >{{weatherDay.weather[0].description}}</p>
     </div>
 
-    <div class="weatherItemContainers moreInfoContainer">
+    <div class="weatherItemContainers moreInfoContainer" ng-click="(moreInfo === true) ? moreInfo = false : moreInfo = true">
         <p class="moreInfoLabel"> More Info</p>
+    </div>
+
+    <div class="weatherItemContainers moreInfoDetailsContainer" ng-show="moreInfo">
+        <p class="moreInfoDetails"> INFO HERE!</p>
+        <p class="moreInfoDetails"> INFO HERE!</p>
+        <p class="moreInfoDetails"> INFO HERE!</p>
+        <p class="moreInfoDetails"> INFO HERE!</p>
+        <p class="moreInfoDetails"> INFO HERE!</p>
+
     </div>
 
 
