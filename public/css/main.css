@@ -39,7 +39,7 @@
 }
 
 .temperatureLabel{
-    font-size: 25px;
+    font-size: 20px;
 }
 .weatherDateContainer{
     margin-bottom: 25px;
@@ -75,3 +75,10 @@
     margin: 0 0 0 0;
 }
 
+.moreInfoTable{
+    margin-bottom: 0px;
+}
+
+.moreInfoKeyValues{
+    text-align: center;
+}

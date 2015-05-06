@@ -18,18 +18,34 @@
         <p class="temperatureLabel" >{{weatherDay.weather[0].description}}</p>
     </div>
 
+    <div class="weatherItemContainers moreInfoDetailsContainer" ng-show="moreInfo">
+        <table class="table table-striped moreInfoTable">
+            <thead>
+            <tr>
+                <th class="moreInfoKeyValues">Details</th>
+                <th>Values</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="(key, val) in weatherDay.temp">
+                <th class="moreInfoKeyValues">{{key}}</th>
+                <th>{{convertToStandard({tempVal:val})}} &deg;</th>
+            </tr>
+            </tbody>
+        </table>
+        <!--<p class="moreInfoDetails">{{convertToStandard({tempVal:weatherDay.temp.day})}} &deg;</p>
+        <p class="moreInfoDetails"> INFO HERE!</p>
+        <p class="moreInfoDetails"> INFO HERE!</p>
+        <p class="moreInfoDetails"> INFO HERE!</p>
+        <p class="moreInfoDetails"> INFO HERE!</p>-->
+
+    </div>
+
     <div class="weatherItemContainers moreInfoContainer" ng-click="(moreInfo === true) ? moreInfo = false : moreInfo = true">
         <p class="moreInfoLabel"> More Info</p>
     </div>
 
-    <div class="weatherItemContainers moreInfoDetailsContainer" ng-show="moreInfo">
-        <p class="moreInfoDetails"> INFO HERE!</p>
-        <p class="moreInfoDetails"> INFO HERE!</p>
-        <p class="moreInfoDetails"> INFO HERE!</p>
-        <p class="moreInfoDetails"> INFO HERE!</p>
-        <p class="moreInfoDetails"> INFO HERE!</p>
 
-    </div>
 
 
 </div>
