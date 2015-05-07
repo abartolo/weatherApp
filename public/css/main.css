@@ -11,7 +11,7 @@
 }
 
 .eachWeatherContainer{
-    background-color: lightblue;
+    /*background-color: lightblue;*/
     /*height: 400px;*/
     border-width: 2px;
     border-style: solid;
@@ -58,13 +58,15 @@
 
 .moreInfoContainer{
     margin: 0 0 0 0;
-    background-color: #000000;
+    background-color: #5cb85c;
     height: 30px;
     line-height: 30px;
+
 }
 
 .moreInfoLabel{
     color: #ffffff;
+    font-weight: bold;
 }
 
 .moreInfoDetailsContainer{
@@ -82,3 +84,10 @@
 .moreInfoKeyValues{
     text-align: center;
 }
+
+.maxTempLabel{
+    font-weight: bold;
+    font-size: 15px;
+    color: #000000;
+}
+

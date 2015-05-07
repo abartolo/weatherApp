@@ -11,7 +11,8 @@
     </div>
 
     <div class="weatherItemContainers temperatureContainer">
-         <p class="temperature">{{convertToStandard({tempVal:weatherDay.temp.day})}} &deg;</p>
+         <p class="temperature">{{convertToStandard({tempVal:weatherDay.temp.day})}} &deg;F</p>
+         <p class="maxTempLabel">Max</p>
     </div>
 
     <div class="weatherItemContainers temperatureLabelContainer">
@@ -22,14 +23,14 @@
         <table class="table table-striped moreInfoTable">
             <thead>
             <tr>
-                <th class="moreInfoKeyValues">Details</th>
-                <th>Values</th>
+                <th class="moreInfoKeyValues bg-primary">Keys</th>
+                <th class="bg-primary">Values</th>
             </tr>
             </thead>
             <tbody>
             <tr ng-repeat="(key, val) in weatherDay.temp">
                 <th class="moreInfoKeyValues">{{key}}</th>
-                <th>{{convertToStandard({tempVal:val})}} &deg;</th>
+                <th>{{convertToStandard({tempVal:val})}} &deg;F</th>
             </tr>
             </tbody>
         </table>
