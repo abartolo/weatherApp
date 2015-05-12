@@ -43,6 +43,7 @@
 }
 .weatherDateContainer{
     margin-bottom: 25px;
+
 }
 
 .weatherImgContainer{
@@ -53,20 +54,28 @@
     margin-bottom: 30px;
 }
 .temperatureLabelContainer{
-    margin-bottom: 73px
+    margin-bottom: 73px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .moreInfoContainer{
     margin: 0 0 0 0;
     background-color: #5cb85c;
-    height: 30px;
-    line-height: 30px;
+    /*height: 30px;
+    line-height: 30px;*/
 
 }
 
 .moreInfoLabel{
     color: #ffffff;
     font-weight: bold;
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 14px;
+    margin-bottom: 14px;
 }
 
 .moreInfoDetailsContainer{
@@ -91,3 +100,49 @@
     color: #000000;
 }
 
+.moreInfoDownArrowLeft{
+    display: inline-block;
+    float: left;
+    margin-left: 10%;
+    color:#ffffff;
+    font-size: 20px;
+    line-height: 200%;
+}
+
+.moreInfoDownArrowRight{
+    display: inline-block;
+    float: right;
+    margin-right: 10%;
+    color:#ffffff;
+    font-size: 20px;
+    line-height: 200%;
+}
+
+.moreInfoDownArrowLeft:link{
+    text-decoration: none;
+}
+.moreInfoDownArrowLeft:active{
+    text-decoration: none;
+}
+.moreInfoDownArrowLeft:hover{
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.moreInfoDownArrowRight:active{
+    text-decoration: none;
+}
+.moreInfoDownArrowRight:hover{
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.moreInfoContainer:hover{
+    cursor: pointer;
+}
+
+.flipArrows{
+    transform: rotate(-180deg);
+    margin-top: 5px;
+}

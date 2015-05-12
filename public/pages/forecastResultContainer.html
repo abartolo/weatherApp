@@ -19,6 +19,12 @@
         <p class="temperatureLabel" >{{weatherDay.weather[0].description}}</p>
     </div>
 
+    <div class="weatherItemContainers moreInfoContainer" ng-click="(moreInfo === true) ? moreInfo = false : moreInfo = true">
+        <a class="moreInfoDownArrowLeft" ng-class="{flipArrows: moreInfo}">&#8595;</a>
+        <p class="moreInfoLabel"> More Info</p>
+        <a class="moreInfoDownArrowRight" ng-class="{flipArrows: moreInfo}">&#8595;</a>
+    </div>
+
     <div class="weatherItemContainers moreInfoDetailsContainer" ng-show="moreInfo">
         <table class="table table-striped moreInfoTable">
             <thead>
@@ -39,12 +45,9 @@
         <p class="moreInfoDetails"> INFO HERE!</p>
         <p class="moreInfoDetails"> INFO HERE!</p>
         <p class="moreInfoDetails"> INFO HERE!</p>-->
-
     </div>
 
-    <div class="weatherItemContainers moreInfoContainer" ng-click="(moreInfo === true) ? moreInfo = false : moreInfo = true">
-        <p class="moreInfoLabel"> More Info</p>
-    </div>
+
 
 
 
