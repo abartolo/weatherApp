@@ -13,5 +13,4 @@ weatherApp.controller('homepageController',['$scope', '$resource', '$location','
         weatherService.city = $scope.cityName;
         $location.path('/forecast');
     };
-
 }]);
