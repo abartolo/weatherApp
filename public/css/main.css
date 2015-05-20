@@ -146,3 +146,12 @@
     transform: rotate(-180deg);
     margin-top: 5px;
 }
+
+.daySelected{
+    font-weight: bold;
+}
+
+#daysLabel{
+    font-size: 20px;
+    vertical-align: middle;
+}

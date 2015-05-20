@@ -1,7 +1,7 @@
 /**
  * Created by Alex on 4/25/2015.
  */
-weatherApp.controller('forecastController',['$scope','$resource', '$filter', '$routeParams','weatherService',function($scope,$resource, $filter,$routeParams,weatherService){
+weatherApp.controller('forecastController',['$scope','$resource', '$filter', '$routeParams','$location','weatherService',function($scope,$resource, $filter,$routeParams,$location,weatherService){
     $scope.cityName = weatherService.city;
     $scope.days = $routeParams.days || '2';
 
@@ -23,6 +23,11 @@ weatherApp.controller('forecastController',['$scope','$resource', '$filter', '$r
         //return $filter('date')(new Date(date * 1000));
         return new Date(date * 1000);
     };
+
+    $scope.requestDays = function(numofDays){
+        $location.path('/forecast/'+numofDays);
+    };
+
 
 }]);
 
