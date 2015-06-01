@@ -1,6 +1,6 @@
 /**
  * Created by Alex on 4/23/2015.
- * Description: This is should be the webserver for my NodeJS project.
+ * Description: This is should be the Web Server for my NodeJS project.
  *  Running "node web-server.js" should start the server and on localhost be able
  *  to run my application
  */
@@ -10,15 +10,36 @@ var app = express();
 var path = require('path');
 
 
+//Static files to be served
+app.use("/css",express.static('public/css'));
+app.use("/js",express.static('public/js'));
+app.use("/lib",express.static('public/lib'));
+app.use("/font-awesome",express.static('public/font-awesome'));
+app.use("/fonts",express.static('public/fonts'));
+app.use("/img",express.static('public/img'));
+app.use("/pages",express.static('public/pages'));
+
 
 //**********Routes*********
-//sends index.html when requested
-app.get('/',function(req,res){
 
-    res.sendFile(path.join(__dirname + '/public/index.html'));
-
+//sends testing index file when requested
+app.get('/testing',function(req,res){
+    console.log("Sent TESTING Index2.html!");
+    res.sendFile(path.join(__dirname + '/public/index2.html'));
 });
 
+//sends index.html when requested
+app.get('/',function(req,res){
+    console.log("Sent Index.html!");
+    res.sendFile(path.join(__dirname + '/public/index.html'));
+});
+
+
+app.listen(3000);
+
+console.log('NodeJS - Listening in port 3000');
+
+/*
 //sends homepage.html when requested
 app.get('/pages/homepage.html',function(req,res){
 
@@ -78,10 +99,8 @@ app.get('/css/main.css',function(req,res){
     res.sendFile(path.join(__dirname + '/public/css/main.css'));
 
 });
+*/
 
-app.listen(3000);
-
-console.log('NodeJS - Listening in port 3000');
 
 
 
